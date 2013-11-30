@@ -1,0 +1,31 @@
+﻿/*--分页条--*/
+.pager
+{
+    text-align:right;
+    height:30px;
+    padding:0 10px;
+    float:right;
+}
+
+.pager a,
+.pager-info
+{
+    border:1px solid #eee;
+    padding:2px 8px;
+}
+
+.pager a:hover, 
+.current-page
+{
+    color:#fff;
+    background-color:#FF0000;
+}
+
+.to-page
+{
+    border:1px solid #eee;
+    width:20px;
+    height:18px;
+    color:#dd8844;
+}
+

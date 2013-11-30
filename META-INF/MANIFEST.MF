@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EES
+Bundle-SymbolicName: EES
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: EES.jar,
+ WebRoot/WEB-INF/lib/sqljdbc4.jar
+Export-Package: com.ees.Utils,
+ com.ees.dao,
+ com.ees.hibernate,
+ com.ees.javabean,
+ com.ees.struts,
+ com.ees.struts.action,
+ com.ees.struts.form,
+ com.microsoft.sqlserver.jdbc,
+ microsoft.sql

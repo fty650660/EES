@@ -1,0 +1,68 @@
+﻿body
+{
+    background-color: #5c87b2;
+    font-size: 9pt;
+    color: #696969;
+    font-family: Arial;
+}
+
+.page
+{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#header h1
+{
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    line-height: 100px;
+    font-size: 32px;
+}
+
+#main
+{
+    background: #fff;
+    padding: 50px 30px;
+}
+
+#main h2
+{
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#main p
+{
+    line-height: 50px;
+}
+
+#main fieldset
+{
+    border: 1px solid #DDD;
+    padding: 15px;
+}
+
+#main legend
+{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.editor-label
+{
+    margin:10px 0;
+}
+
+.editor-field
+{
+    margin:10px 0;
+}
+
+input
+{
+    width: 200px;
+    border: 1px solid #CCC;
+}

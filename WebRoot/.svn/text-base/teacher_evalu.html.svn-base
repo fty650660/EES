@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>New Web Project</title>
+            <script language="JavaScript">
+            var Row = [{
+                "QID": "1",
+                "Content": "讲课有热情，精神饱满。",
+                "Weight": "100"
+            }, {
+                "QID": "2",
+                "Content": "衣着整洁，教态好。",
+                "Weight": "100"
+            }, {
+                "QID": "3",
+                "Content": "讲课有感染力，能吸引学生的注意力。",
+                "Weight": "100"
+            }, {
+                "QID": "4",
+                "Content": "对问题的阐述深入浅出，有启发性。",
+                "Weight": "100"
+            }, {
+                "QID": "5",
+                "Content": "对问题的阐述简练准确，重点突出，思路清晰。",
+                "Weight": "100"
+            }, {
+                "QID": "6",
+                "Content": "对课程内容娴熟，运用自如。",
+                "Weight": "100"
+            }, {
+                "QID": "7",
+                "Content": "讲述内容充实，信息量大。",
+                "Weight": "100"
+            }, {
+                "QID": "8",
+                "Content": "教学内容能反映或联系学科发展的新思想，新观念，新成果。",
+                "Weight": "100"
+            }, {
+                "QID": "9",
+                "Content": "能给予学生思考、联想、创新的启迪。",
+                "Weight": "100"
+            }, {
+                "QID": "10",
+                "Content": "能调动学生情绪，课堂气氛活跃。",
+                "Weight": "100"
+            }, {
+                "QID": "11",
+                "Content": "能有效地利用各种教学媒体。",
+                "Weight": "100"
+            }, ];
+                    
+            function loop2(){
+                var num = Row.length;
+
+                document.write("<table style=\"width:80%;align:middle\" class=\"questions\" border=\"1\">");
+                document.write("<tr style=\"text-align:center\"><th>&nbsp</th><th>评价项目</th><th>优</th><th>良</th><th>中</th><th>合格</th><th>不合格</th></tr>");
+                for (var a = 0; a < num; a++) {
+                    document.write("<tr name=\"q" + (a + 1) + "\"><td>" + Row[a].QID + "</td><td>" + Row[a].Content + "</td>");
+                    document.write("<td style=\"width:8%;text-align:center\"><input type=\"radio\" value=\"" + Row[a].Weight * 0.9 + "\" name=\"q" + (a + 1) + "\"></td>");
+                    document.write("<td style=\"width:8%;text-align:center\"><input type=\"radio\" value=\"" + Row[a].Weight * 0.8 + "\" name=\"q" + (a + 1) + "\"></td>");
+                    document.write("<td style=\"width:8%;text-align:center\"><input type=\"radio\" value=\"" + Row[a].Weight * 0.7 + "\" name=\"q" + (a + 1) + "\"></td>");
+                    document.write("<td style=\"width:8%;text-align:center\"><input type=\"radio\" value=\"" + Row[a].Weight * 0.6 + "\" name=\"q" + (a + 1) + "\"></td>");
+                    document.write("<td style=\"width:8%;text-align:center\"><input type=\"radio\" value=\"" + Row[a].Weight * 0.5 + "\" name=\"q" + (a + 1) + "\"></td>");
+                    document.write("</tr>");
+                };
+                document.write("<tr><td colspan=\"2\">综合评价（分为优、良、中、合格、不合格五等）</td>");
+                document.write("<td style=\"text-align:center\"><input type=\"radio\" value=\"" + 100 * 0.9 + "\" name=\"sum\"></td>");
+                document.write("<td style=\"text-align:center\"><input type=\"radio\" value=\"" + 100 * 0.8 + "\" name=\"sum\"></td>");
+                document.write("<td style=\"text-align:center\"><input type=\"radio\" value=\"" + 100 * 0.7 + "\" name=\"sum\"></td>");
+                document.write("<td style=\"text-align:center\"><input type=\"radio\" value=\"" + 100 * 0.6 + "\" name=\"sum\"></td>");
+                document.write("<td style=\"text-align:center\"><input type=\"radio\" value=\"" + 100 * 0.5 + "\" name=\"sum\"></td>");
+                document.write("</tr>");
+                
+                document.write("<tr><th colspan=\"7\">对课堂内容以及其它方面的具体意见或建议：</th></tr>");
+                document.write("<tr height=\"200\"><td width:100% colspan=\"7\"><textarea style=\"width:98%;height:200px\" name=\"reason\" id=\"reason\"></textarea></td></tr>");
+                
+                document.write("</table>");
+            }
+            
+            function check1(){				
+                if (!document.getElementsByTagName) 
+                    return false;
+                var tables = document.getElementsByTagName("table");
+                var rows = tables[0].getElementsByTagName("tr");
+				
+				for(var x=0;x<Row.length;x++){
+                        rows[x].style.backgroundColor = "#ffffff";					
+				}
+                
+                for (var x = 0; x < Row.length ; x++) {
+                    var flag = false;
+                    var qradio = document.getElementsByName("q" + (x + 1));
+                    for (var i = 0; i < qradio.length; i++) {
+                        if (qradio[i].checked) 
+                            flag = true;
+                    }
+                    if (flag == false) {
+                        rows[x+1].style.backgroundColor = "#ffd2ff";
+                    }
+                }
+            }
+			
+			function clearRadio(){
+                if (!document.getElementsByTagName) 
+                    return false;
+                var tables = document.getElementsByTagName("table");
+                var rows = tables[0].getElementsByTagName("tr");
+                
+                for (var x = 1; x < Row.length + 1; x++) {
+                    var flag = false;
+                    var qradio = document.getElementsByName("q" + (x + 1));
+                    for (var i = 0; i < qradio.length; i++) {
+                        qradio[i].value="";
+                    }
+                }
+            }
+			
+			function check2(){
+				  var myDiv=document.getElementById("depterr");
+				  myDiv.innerHTML="";  
+				  var dept=document.getElementById("dept");
+				  var strName=dept.value;
+//				  alert(deptcontent);
+				  if (strName.length == 0)
+				  {
+				  	dept.style.backgroundColor="#ffd2ff";
+//				  	dept.style.border="1px solid #ffd2ff";
+//				     myDiv.innerHTML="<font color='red'>用asfasfasfasfasfasfffffffff</font>";
+				     return;
+				  }
+//				  dept.style.border="";
+					dept.style.backgroundColor = "#ffffff";
+				
+			}
+			
+			function agelevelfunc(){
+				var agelevels=document.getElementsByName("agelevel");
+				for(var i in agelevels){
+					if(agelevels[i].checked)
+						alert(agelevels[i].value);							
+				}
+			}
+			
+			function fillscores(){
+				var agelevels=document.getElementsByName("agelevel");
+						for(var i in agelevels){
+							if(agelevels[i].value==3)
+								agelevels[i].checked="checked";							
+						}
+						var q1=document.getElementsByName("q1");
+						for(var i in q1){
+							if(q1[i].value==90)
+								q1[i].checked="checked";							
+						}
+			}
+			
+        </script>
+    </head>
+    <body>
+        <div style=widows:>
+        </div>
+        <form id="evaluform" action="">
+        	<div id="container" align="middle" style="width:85%">
+        		<h1 align="middle" >贵 州 大 学 听 课 评 价 表</h1>
+        		<div id="leftcontent" style="width:50%;float:left">	
+	        		开课单位：<input type="text" name="dept" id="dept" onblur="check2()" > <div id="depterr" style="display:inline"></div>      <br>   				
+					课程名称：<input type="text" name="cname" id="cname">      <br>
+					授课教师：<input type="text" name="teaname" id="tname">      <br>
+	        		授课时间：<input type="text" name="teatime" id="teatime">  
+				</div>
+			
+				<div id="rightcontent" style="width:50%;float:right">
+					授课班级：<input type="text" name="clname" id="cname">  <br>
+					课程类型：<input type="text" name="coursetype" id="coursetype"><br>
+				           年龄层次：<input id="agelevel" type="radio" value="1" name="agelevel">老<input id="agelevel" type="radio" value="2" name="agelevel">中<input id="agelevel" type="radio" value="3" name="agelevel">青 <br>
+					授课地点：<input type="text" name="tealocation" id="tealocation"> 
+            	</div>
+				<div style="clear:both"><br></div>
+				<div id="evalutable">
+					<script language="JavaScript">
+		                loop2();
+						fillscores();
+		            </script>
+				</div>
+				<br>
+				<div style="width:50%;float:left">
+					听课人（签字）：<input type="text" name="lisname">
+				</div>
+				<div style="width:50%;float:left">
+					提交时间：<input type="text" name="subtime"> 
+				</div>
+				<div style="clear:both"><br><br></div>
+				<div id="submitbutton" style="width:50%;float:left">
+	            	<input type="button" value="提交"  onclick="agelevelfunc()">
+				</div>
+				<div id="pressbutton" style="width:50%;float:right">				
+					<input type="button" value="打印" >
+				</div>
+				
+			</div> 
+        </form>
+    </body>
+</html>

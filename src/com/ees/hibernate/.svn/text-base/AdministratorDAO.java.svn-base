@@ -1,0 +1,384 @@
+package com.ees.hibernate;
+
+import java.util.List;
+
+import org.hibernate.Hibernate;
+import org.hibernate.LockMode;
+import org.hibernate.Query;
+import org.hibernate.criterion.Example;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * A data access object (DAO) providing persistence and search support for
+ * Administrator entities. Transaction control of the save(), update() and
+ * delete() operations can directly support Spring container-managed
+ * transactions or they can be augmented to handle user-managed Spring
+ * transactions. Each of these methods provides additional information for how
+ * to configure it for the desired type of transaction control.
+ * 
+ * @see com.ees.hibernate.Administrator
+ * @author MyEclipse Persistence Tools
+ */
+
+public class AdministratorDAO extends BaseHibernateDAO {
+	private static final Logger log = LoggerFactory
+			.getLogger(AdministratorDAO.class);
+	// property constants
+	public static final String NAME = "name";
+	public static final String PASSWORD = "password";
+	public static final String LEVEL = "level";
+	
+	public static final String XN="XN";
+	public static final String XQ="XQ";
+	public static final String DEPT="Dept";
+	public static final String FACULTY="faculty";
+	public static final String TID="TID";
+	public static final String TNAME="TName";
+	public static final String CNAME="CName";
+	public static final String COURSETYPE="CourseType";
+	public static final String CID="CID";
+	public static final String SUMAVG="SumAvg";
+	public static final String NUM="Num";
+
+	public List showAllTeaList() {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType," +
+				"(SELECT SumScore/Number FROM dbo.TeaEvalRes " +
+				"WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg," +
+				"(SELECT Number FROM dbo.TeaEvalRes " +
+				"WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num " +
+				"FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ " +
+				"WHERE dbo.Teacher.Dept='计算机科学与信息学院'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY,Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showByXN(String xn, String faculty) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND cc.XN='" + xn + "' AND dbo.Teacher.faculty='" + faculty + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+
+	public List showByTnameF(String tname, String faculty) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND dbo.Teacher.TName='" + tname + "' AND dbo.Teacher.faculty='" + faculty + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showByTnameY(String tname, String xn) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND dbo.Teacher.TName='" + tname + "' AND cc.XN='" + xn + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showByCnameF(String cname, String faculty) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND cc.CNAME='" + cname + "' AND dbo.Teacher.faculty='" + faculty + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showByCnameY(String cname, String xn) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND cc.CNAME='" + cname + "' AND cc.XN='" + xn + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showByCourseTypeF(String coursetype, String faculty) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND cc.CourseType='" + coursetype + "' AND dbo.Teacher.faculty='" + faculty + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showByCourseTypeY(String coursetype, String xn) {
+		String sql = "SELECT DISTINCT cc.XN,cc.XQ,Dept,faculty,cc.TID,dbo.Teacher.TName,cc.CID,cc.CName,cc.CourseType,"
+				+ "(SELECT SumScore/Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS SumAvg,"
+				+ "(SELECT Number FROM dbo.TeaEvalRes "
+				+ "WHERE dbo.TeaEvalRes.TID=cc.TID AND dbo.TeaEvalRes.CID=cc.CID AND dbo.TeaEvalRes.XN=cc.XN AND dbo.TeaEvalRes.XQ=cc.XQ) AS Num "
+				+ "FROM dbo.Teacher RIGHT JOIN dbo.ChooseClass AS cc ON dbo.Teacher.TID = cc.TID LEFT JOIN dbo.TeaEvalRes ON cc.CID = dbo.TeaEvalRes.CID AND cc.TID = dbo.TeaEvalRes.TID AND cc.XN = dbo.TeaEvalRes.XN AND cc.XQ = dbo.TeaEvalRes.XQ "
+				+ "WHERE dbo.Teacher.Dept='计算机科学与信息学院'" + " AND cc.CourseType='" + coursetype + "' AND cc.XN='" + xn + "'";
+		Query query = getSession().createSQLQuery(sql)
+				.addScalar(XN, Hibernate.STRING)
+				.addScalar(XQ, Hibernate.INTEGER)
+				.addScalar(DEPT, Hibernate.STRING)
+				.addScalar(FACULTY, Hibernate.STRING)
+				.addScalar(TID, Hibernate.STRING)
+				.addScalar(TNAME, Hibernate.STRING)
+				.addScalar(CID, Hibernate.STRING)
+				.addScalar(CNAME, Hibernate.STRING)
+				.addScalar(COURSETYPE, Hibernate.STRING)
+				.addScalar(SUMAVG, Hibernate.INTEGER)
+				.addScalar(NUM, Hibernate.INTEGER);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showFaculty() {
+		String sql = "SELECT DISTINCT faculty FROM dbo.Teacher WHERE Dept='计算机科学与信息学院'";
+		Query query = getSession().createSQLQuery(sql).addScalar(FACULTY,
+				Hibernate.STRING);
+		List list = query.list();
+		return list;
+	}
+	
+	public List showXn() {
+		String sql = "SELECT DISTINCT XN FROM dbo.ChooseClass";
+		Query query = getSession().createSQLQuery(sql).addScalar(XN,
+				Hibernate.STRING);
+		List list = query.list();
+		return list;
+	}
+	
+	public List<String> fillSelectList() {
+
+		String sql = "SELECT dbo.Administrator.Name FROM dbo.Administrator";
+		Query query = getSession().createSQLQuery(sql).addScalar(NAME,
+				Hibernate.STRING);
+		List selectList = query.list();
+
+		return selectList;
+	}
+
+	public void save(Administrator transientInstance) {
+		log.debug("saving Administrator instance");
+		try {
+			getSession().save(transientInstance);
+			log.debug("save successful");
+		} catch (RuntimeException re) {
+			log.error("save failed", re);
+			throw re;
+		}
+	}
+
+	public void delete(Administrator persistentInstance) {
+		log.debug("deleting Administrator instance");
+		try {
+			getSession().delete(persistentInstance);
+			log.debug("delete successful");
+		} catch (RuntimeException re) {
+			log.error("delete failed", re);
+			throw re;
+		}
+	}
+
+	public Administrator findById(java.lang.Integer id) {
+		log.debug("getting Administrator instance with id: " + id);
+		try {
+			Administrator instance = (Administrator) getSession().get(
+					"com.ees.hibernate.Administrator", id);
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+
+	public List findByExample(Administrator instance) {
+		log.debug("finding Administrator instance by example");
+		try {
+			List results = getSession()
+					.createCriteria("com.ees.hibernate.Administrator")
+					.add(Example.create(instance)).list();
+			log.debug("find by example successful, result size: "
+					+ results.size());
+			return results;
+		} catch (RuntimeException re) {
+			log.error("find by example failed", re);
+			throw re;
+		}
+	}
+
+	public List findByProperty(String propertyName, Object value) {
+		log.debug("finding Administrator instance with property: "
+				+ propertyName + ", value: " + value);
+		try {
+			String queryString = "from Administrator as model where model."
+					+ propertyName + "= ?";
+			Query queryObject = getSession().createQuery(queryString);
+			queryObject.setParameter(0, value);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+
+	public List findByName(Object name) {
+		return findByProperty(NAME, name);
+	}
+
+	public List findByPassword(Object password) {
+		return findByProperty(PASSWORD, password);
+	}
+
+	public List findByLevel(Object level) {
+		return findByProperty(LEVEL, level);
+	}
+
+	public List findAll() {
+		log.debug("finding all Administrator instances");
+		try {
+			String queryString = "from Administrator";
+			Query queryObject = getSession().createQuery(queryString);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+
+	public Administrator merge(Administrator detachedInstance) {
+		log.debug("merging Administrator instance");
+		try {
+			Administrator result = (Administrator) getSession().merge(
+					detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public void attachDirty(Administrator instance) {
+		log.debug("attaching dirty Administrator instance");
+		try {
+			getSession().saveOrUpdate(instance);
+			log.debug("attach successful");
+		} catch (RuntimeException re) {
+			log.error("attach failed", re);
+			throw re;
+		}
+	}
+
+	public void attachClean(Administrator instance) {
+		log.debug("attaching clean Administrator instance");
+		try {
+			getSession().lock(instance, LockMode.NONE);
+			log.debug("attach successful");
+		} catch (RuntimeException re) {
+			log.error("attach failed", re);
+			throw re;
+		}
+	}
+}

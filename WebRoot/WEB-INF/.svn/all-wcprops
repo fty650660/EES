@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/gundamdxdx.ees/!svn/ver/15/WebRoot/WEB-INF
+END
+struts-logic.tld
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/struts-logic.tld
+END
+struts-tiles.tld
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/struts-tiles.tld
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/gundamdxdx.ees/!svn/ver/15/WebRoot/WEB-INF/struts-config.xml
+END
+struts-nested.tld
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/struts-nested.tld
+END
+struts-html.tld
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/struts-html.tld
+END
+struts-bean.tld
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/struts-bean.tld
+END
+validator-rules.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/validator-rules.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/gundamdxdx.ees/!svn/ver/15/WebRoot/WEB-INF/web.xml
+END
+.struts-config.mex
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/.struts-config.mex
+END

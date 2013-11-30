@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/gundamdxdx.ees/!svn/ver/18/src/com/ees/struts/action
+END
+TeaEvaluationAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/struts/action/TeaEvaluationAction.java
+END
+MailAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/struts/action/MailAction.java
+END
+StudentAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/struts/action/StudentAction.java
+END
+LoginAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/struts/action/LoginAction.java
+END
+Admin.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gundamdxdx.ees/!svn/ver/28/src/com/ees/struts/action/Admin.java
+END
+BaseAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/struts/action/BaseAction.java
+END
+TeacherAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/struts/action/TeacherAction.java
+END
+MailListAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/struts/action/MailListAction.java
+END
+MailReplyAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/struts/action/MailReplyAction.java
+END
+AdminCheckTeaAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/struts/action/AdminCheckTeaAction.java
+END

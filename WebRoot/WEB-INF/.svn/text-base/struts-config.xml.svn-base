@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+
+		<form-bean name="loginForm" type="com.ees.struts.form.LoginForm" />
+		<form-bean name="writeMailForm" type="com.ees.struts.form.WriteMailForm" />
+		<form-bean name="showMailReplyForm" type="com.ees.struts.form.ShowMailReplyForm" />
+		<form-bean name="MailListForm" type="com.ees.struts.form.MailListForm" />
+		<form-bean name="teaEvaluationForm" type="com.ees.struts.form.TeaEvalutionForm"></form-bean>
+		
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<action attribute="loginForm"  name="loginForm"
+			path="/login" scope="request" type="com.ees.struts.action.LoginAction">
+			<set-property property="cancellable" value="true" />
+			<forward name="loginSuccess" path="/frame.jsp" />
+			<forward name="reLogin" path="/login.jsp" />
+		</action>		
+		<action path="/Mail" type="com.ees.struts.action.MailAction"
+			name="writeMailForm" parameter="method">
+			<forward name="fillSelect" path="/writeMail.jsp"></forward>
+		</action>
+
+		<action path="/MailList" type="com.ees.struts.action.MailListAction"
+			name="MailListForm" parameter="method" scope="request">
+			<forward name="stuMailList" path="/form/stuMailList.jsp"></forward>
+			<forward name="adminMailList" path="/form/adminMailList.jsp"></forward>
+		</action>
+
+		<action path="/MailReply" type="com.ees.struts.action.MailReplyAction"
+			name="showMailReplyForm" parameter="method">
+			<forward name="showMailReply" path="/showMailReply.jsp"></forward>
+		</action>
+
+		<action path="/TeaEvaluation" type="com.ees.struts.action.TeaEvaluationAction"
+			name="teaEvaluationForm" parameter="method" >
+			<forward name="sameFacultyCourse" path="/form/sameFacultyCourse.jsp"></forward>
+			<forward name="addEvaluation" path="/form/teacherEvaluation.jsp"></forward>
+			<forward name="checkEvalu" path="/form/checkEvalu.jsp"></forward>
+			<forward name="updateSuccess" path="/form/updateSuccess.jsp"></forward>
+			<forward name="evaluSuccess" path="/form/evaluSuccess.jsp"></forward>
+			<forward name="teacherOwnCourse" path="/form/teacherOwnCourse.jsp"></forward>
+			<forward name="loadForAddEvalu" path="/form/loadForAddEvalu.jsp"></forward>
+			<forward name="alreadyEvalu" path="/form/alreadyEvalu.jsp"></forward>
+			<forward name="courseEvaluScore" path="/form/courseEvaluScore.jsp"></forward>
+		</action>
+		
+		<action path="/student" type="com.ees.struts.action.StudentAction">
+			<set-property property="cancellable" value="false" />
+			<forward name="studentCourse" path="/form/sCourseList.jsp" />
+			<forward name="getQuestionnaire" path="/showQuestionnaire.jsp" />
+		</action>
+		<action attribute="teacherForm" name="teacherForm" path="/teacher"
+			scope="request" type="com.ees.struts.action.TeacherAction">
+			<set-property property="cancellable" value="false" />
+			<forward name="teacherCourse" path="/form/tCourseList.jsp" />
+			<forward name="showResult" path="/evalResult.jsp" />
+		</action>
+		<action path="/admin" type="com.ees.struts.action.Admin">
+			<set-property property="cancellable" value="false" />
+			<forward name="showListSuccess" path="/showList.jsp" />
+			<forward name="showCharts" path="/evalCharts.jsp" />
+			<forward name="showTable" path="/evalTable.jsp" />
+			<forward name="backToShowList" path="/admin.do" />
+			<forward name="backToAdminEdite" path="/adminCreate.jsp" />
+			<forward name="backToQuestionnaireEdite" path="/questionnaire.jsp" />
+			<forward name="showListTeacher" path="/showListTeacher.jsp" />
+			<forward name="showListCourse" path="/showListCourse.jsp" />
+			<forward name="toFilterList" path="/showListWithFilter.jsp" />
+			<forward name="toTypeList" path="/sTypeList.jsp" />
+		</action>
+		
+	</action-mappings>
+
+	<message-resources parameter="com.ees.struts.ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=GBK" pageEncoding="GBK" %>
+ <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Ìí¼ÓÆÀ¼Û³É¹¦</title>
+		<script type="text/javascript">
+			function printEvaluTable(){
+				window.open("printEvaluation.jsp");
+			}
+		</script>
+    </head>
+    <body>
+        <p>
+            ÆÀ¼Û³É¹¦£¬·µ»ØÉÏÒ»Ò³½øÐÐ´òÓ¡£¿<a href="javascript:" onClick="history.back(-1)">·µ»Ø</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/lib
+END
+mssqlserver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/lib/mssqlserver.jar
+END
+sqljdbc4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/lib/sqljdbc4.jar
+END
+msbase.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/lib/msbase.jar
+END
+msutil.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gundamdxdx.ees/!svn/ver/12/WebRoot/WEB-INF/lib/msutil.jar
+END

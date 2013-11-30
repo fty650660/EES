@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="EES_SVN_TEST"
+  id="myeclipse.1339765833047"
+  context-root="/EES"
+  j2ee-spec="6.0"
+  archive="EES_SVN_TEST.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

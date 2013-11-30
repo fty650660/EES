@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html:html lang="true">
+    <head>
+        <html:base/><title>同系教师任课表</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+        <meta http-equiv="description" content="This is my page">
+        <link href="../lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+	    <script src="../lib/jquery/jquery-1.3.2.min.js" type="text/javascript"></script>
+	    <script src="../lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+	    <script src="../lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script> 
+        <script type="text/javascript" >
+                var courseListString = {
+            Rows: [{
+                "TID": "20061124",
+                "TName": "裴炳镇",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101082",
+                "CNAME": "离散数学1-1",
+                "CourseType": "院级公共必修课"
+            }, {
+                "TID": "20061166",
+                "TName": "姚凯学",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041428",
+                "CNAME": "单片机与接口技术",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20061177",
+                "TName": "夏玉勤",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031252",
+                "CNAME": "计算机硬件技术基础",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20061177",
+                "TName": "夏玉勤",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041313",
+                "CNAME": "数字电子技术",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20061177",
+                "TName": "夏玉勤",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041314",
+                "CNAME": "数字电子技术实验",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20061203",
+                "TName": "程欣宇",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "080604142e",
+                "CNAME": "算法设计与分析（双语）",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20061203",
+                "TName": "程欣宇",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041447",
+                "CNAME": "算法设计与分析",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20061482",
+                "TName": "姚凯科",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041313",
+                "CNAME": "数字电子技术",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20061482",
+                "TName": "姚凯科",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041314",
+                "CNAME": "数字电子技术实验",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20062041",
+                "TName": "周婵",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041413",
+                "CNAME": "专业英语",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20062041",
+                "TName": "周婵",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041449",
+                "CNAME": "专业英语",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20062041",
+                "TName": "周婵",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101015",
+                "CNAME": "科技文献检索（双语）",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20062397",
+                "TName": "刘长云",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041345",
+                "CNAME": "数据结构",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20062416",
+                "TName": "苟刚",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101010",
+                "CNAME": "软件项目管理",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20062453",
+                "TName": "马丹",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031242",
+                "CNAME": "数据库系统设计",
+                "CourseType": "学科大类任选"
+            }, {
+                "TID": "20062453",
+                "TName": "马丹",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "080604131a",
+                "CNAME": "数据库原理",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20062453",
+                "TName": "马丹",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806051614",
+                "CNAME": "数据库原理课程设计",
+                "CourseType": "实践教学环节"
+            }, {
+                "TID": "20062522",
+                "TName": "张永军",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806051612",
+                "CNAME": "程序设计方法与设计",
+                "CourseType": "实践教学环节"
+            }, {
+                "TID": "20062522",
+                "TName": "张永军",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101098",
+                "CNAME": "UML系统建模与分析设计",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20063018",
+                "TName": "杨静",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101082",
+                "CNAME": "离散数学1-1",
+                "CourseType": "院级公共必修课"
+            }, {
+                "TID": "20063176",
+                "TName": "陈晓明",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041319",
+                "CNAME": "操作系统",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20063176",
+                "TName": "陈晓明",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806051613",
+                "CNAME": "操作系统课程设计",
+                "CourseType": "实践教学环节"
+            }, {
+                "TID": "20063542",
+                "TName": "龙慧云",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031102",
+                "CNAME": "高级语言程序设计",
+                "CourseType": "学科大类必修"
+            }, {
+                "TID": "20063542",
+                "TName": "龙慧云",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031103",
+                "CNAME": "高级语言程序设计实验",
+                "CourseType": "学科大类必修"
+            }, {
+                "TID": "20064226",
+                "TName": "涂孝颖",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101067",
+                "CNAME": "计算机安全导论",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20064675",
+                "TName": "申玲",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041344",
+                "CNAME": "软件工程与计算",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20064675",
+                "TName": "申玲",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806051644",
+                "CNAME": "软件工程课程设计",
+                "CourseType": "实践教学环节"
+            }, {
+                "TID": "20064675",
+                "TName": "申玲",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101035",
+                "CNAME": "软件工程",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20064675",
+                "TName": "申玲",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806141061",
+                "CNAME": "软件测试技术课程设计",
+                "CourseType": "集中实践环节"
+            }, {
+                "TID": "20065123",
+                "TName": "段迅",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041413",
+                "CNAME": "专业英语",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20065123",
+                "TName": "段迅",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101070",
+                "CNAME": "P2P及OVERLAY Network（双语）",
+                "CourseType": "院级公共任选课"
+            }, {
+                "TID": "20065469",
+                "TName": "蔡丽",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031251",
+                "CNAME": "计算机网络",
+                "CourseType": "学科大类任选"
+            }, {
+                "TID": "20066192",
+                "TName": "胡滨",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041514",
+                "CNAME": "汇编语言程序设计",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20066192",
+                "TName": "胡滨",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041515",
+                "CNAME": "汇编语言程序设计实验",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20066521",
+                "TName": "汪健",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041446",
+                "CNAME": "软件开发技术",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20066544",
+                "TName": "徐晶",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031211",
+                "CNAME": "数值分析",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20066544",
+                "TName": "徐晶",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031212",
+                "CNAME": "数值分析实验",
+                "CourseType": "学科大类任选"
+            }, {
+                "TID": "20066572",
+                "TName": "张厚武",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041428",
+                "CNAME": "单片机与接口技术",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20066572",
+                "TName": "张厚武",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041514",
+                "CNAME": "汇编语言程序设计",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20066572",
+                "TName": "张厚武",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041515",
+                "CNAME": "汇编语言程序设计实验",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20066745",
+                "TName": "刘峰",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101061",
+                "CNAME": "软件测试技术",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20066745",
+                "TName": "刘峰",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806141037",
+                "CNAME": "软件工程综合设计（计科）",
+                "CourseType": "集中实践环节"
+            }, {
+                "TID": "20066745",
+                "TName": "刘峰",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806141061",
+                "CNAME": "软件测试技术课程设计",
+                "CourseType": "集中实践环节"
+            }, {
+                "TID": "20066771",
+                "TName": "王翔",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041425",
+                "CNAME": "数字信号处理",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20066771",
+                "TName": "王翔",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041426",
+                "CNAME": "数字信号处理实验",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20067086",
+                "TName": "杨旗",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101041",
+                "CNAME": "计算机系统结构",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20067403",
+                "TName": "孔广黔",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101007",
+                "CNAME": "网络实用技术",
+                "CourseType": "院级公共任选课"
+            }, {
+                "TID": "20067516",
+                "TName": "詹颖",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041319",
+                "CNAME": "操作系统",
+                "CourseType": "专业必修课"
+            }, {
+                "TID": "20067516",
+                "TName": "詹颖",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806051613",
+                "CNAME": "操作系统课程设计",
+                "CourseType": "实践教学环节"
+            }, {
+                "TID": "20067598",
+                "TName": "李泽平",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031211",
+                "CNAME": "数值分析",
+                "CourseType": "学科大类选修"
+            }, {
+                "TID": "20067598",
+                "TName": "李泽平",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031212",
+                "CNAME": "数值分析实验",
+                "CourseType": "学科大类任选"
+            }, {
+                "TID": "20067598",
+                "TName": "李泽平",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "080603121c",
+                "CNAME": "数学建模",
+                "CourseType": "学科大类选修"
+            }, {
+                "TID": "20067858",
+                "TName": "张弘",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101010",
+                "CNAME": "软件项目管理",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20068258",
+                "TName": "王国美",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031248",
+                "CNAME": "多媒体技术",
+                "CourseType": "学科大类任选"
+            }, {
+                "TID": "20069275",
+                "TName": "王以松",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101048",
+                "CNAME": "人工智能导论",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20069996",
+                "TName": "张丽",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101082",
+                "CNAME": "离散数学1-1",
+                "CourseType": "院级公共必修课"
+            }, {
+                "TID": "20071819",
+                "TName": "秦永彬",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031102",
+                "CNAME": "高级语言程序设计",
+                "CourseType": "学科大类必修"
+            }, {
+                "TID": "20071819",
+                "TName": "秦永彬",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031103",
+                "CNAME": "高级语言程序设计实验",
+                "CourseType": "学科大类必修"
+            }, {
+                "TID": "20076233",
+                "TName": "薛现斌",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806031215",
+                "CNAME": "嵌入式系统原理与应用",
+                "CourseType": "学科大类任选"
+            }, {
+                "TID": "20076233",
+                "TName": "薛现斌",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101011",
+                "CNAME": "嵌入式系统原理与应用",
+                "CourseType": "专业任选课"
+            }, {
+                "TID": "20090776",
+                "TName": "皮建勇",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806041443",
+                "CNAME": "操作系统",
+                "CourseType": "专业限选课"
+            }, {
+                "TID": "20090776",
+                "TName": "皮建勇",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806051643",
+                "CNAME": "操作系统课程设计",
+                "CourseType": "实践教学环节"
+            }, {
+                "TID": "20099751",
+                "TName": "吴云",
+                "Dept": "计算机科学与信息学院",
+                "facult": "计科系",
+                "CID": "0806101009",
+                "CNAME": "多媒体技术",
+                "CourseType": "院级公共任选课"
+            }],
+            Total: 63
+        };    
+		var grid=null;
+//		var courseListString=<%=request.getAttribute("courseListString")%>;
+                    $(function () {
+                       grid=$("#maingrid4").ligerGrid({
+                            columns: [
+							{ display: '教师号', name: 'TID', width: 80,align:'center' },  
+                            { display: '教师姓名', name: 'TName', width: 50,align:'center' },              
+                            { display: '学院名称', name: 'Dept', width: 140,align:"center" },
+							{ display: '系名称', name: 'facult',  width: 50,align: 'center' },
+							{ display: '课程号', name: 'CID', width: 100,align:'center' },
+							{ display: '课程名称', name: 'CNAME', width: 160,align:'center' },
+							{ display: '课程性质', name: 'CourseType', width: 110,align:'center' },
+                            { display: '听课评价', isAllowHide: false,render: function (row)
+                                {
+                                    var html = '<a href="../TeaEvaluation.do?method=fillinEvaluTable&teaid='+row.TID+'&teaname='+row.TName+'&cid='+row.CID+'&coursetype='+row.CourseType+'&cname='+row.CNAME+'&dept='+row.Dept+'" >评价</a>';
+                                    return html;
+                                    
+                                }
+                            }
+                            ], data: $.extend(true,{},courseListString), pageSize: 30,where : f_getWhere(), sortName: 'TID', 
+                            width: '100%',height:'100%'
+                        }); 
+                        $("#pageloading").hide(); 
+                    });
+                function f_search()
+		        {
+		            grid.options.data = $.extend(true,{},courseListString);
+		            grid.loadData(f_getWhere());
+		        }
+		        function f_getWhere()
+		        {
+		            if(!grid) return null;
+		            var clause = function (rowdata, rowindex)
+		            {
+		                var key = $("#txtKey").val();
+		                if($("#selector").val()=='1')
+							return rowdata.TName.indexOf(key) > -1;
+						else
+							return rowdata.CNAME.indexOf(key) > -1;
+		            };
+		            return clause; 
+		        }
+        </script>
+    </head>
+    <body style="padding:0px; overflow:hidden">
+		<div style="margin:5; padding:5; text-align:right">
+		</div>
+        <div class="l-loading" style="display:block" id="pageloading">
+        </div>
+		<div id="searchbar">
+	<select id="selector">
+		<option value="1">教师姓名</option>
+		<option value="2">课程名称</option>
+		
+	</select>
+		
+    <input id="txtKey" type="text" />
+    <input id="btnOK" type="button" value="button" onclick="f_search()" />
+</div>
+        <div id="maingrid4" style="margin:0; padding:0">
+        </div>
+        <div style="display:none;">
+        </div>
+    </body>
+</html:html>

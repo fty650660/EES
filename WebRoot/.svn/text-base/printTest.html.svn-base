@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>New Web Project</title>
+        <script language="JavaScript">
+        	
+            var Row = [{
+                "QID": "1",
+                "Content": "讲课有热情，精神饱满。",
+                "Weight": "100"
+            }, {
+                "QID": "2",
+                "Content": "衣着整洁，教态好。",
+                "Weight": "100"
+            }, {
+                "QID": "3",
+                "Content": "讲课有感染力，能吸引学生的注意力。",
+                "Weight": "100"
+            }, {
+                "QID": "4",
+                "Content": "对问题的阐述深入浅出，有启发性。",
+                "Weight": "100"
+            }, {
+                "QID": "5",
+                "Content": "对问题的阐述简练准确，重点突出，思路清晰。",
+                "Weight": "100"
+            }, {
+                "QID": "6",
+                "Content": "对课程内容娴熟，运用自如。",
+                "Weight": "100"
+            }, {
+                "QID": "7",
+                "Content": "讲述内容充实，信息量大。",
+                "Weight": "100"
+            }, {
+                "QID": "8",
+                "Content": "教学内容能反映或联系学科发展的新思想，新观念，新成果。",
+                "Weight": "100"
+            }, {
+                "QID": "9",
+                "Content": "能给予学生思考、联想、创新的启迪。",
+                "Weight": "100"
+            }, {
+                "QID": "10",
+                "Content": "能调动学生情绪，课堂气氛活跃。",
+                "Weight": "100"
+            }, {
+                "QID": "11",
+                "Content": "能有效地利用各种教学媒体。",
+                "Weight": "100"
+            } ];
+            
+			//alert(Row.length);
+			
+            function loop2(){
+                var num = Row.length;
+                
+                document.write("<table frame=\"border\" style=\"width:90%;align:middle\" class=\"questions\" border=1 cellspacing=0>");
+                document.write("<tr style=\"text-align:center\" border=\"1\"><th>&nbsp</th><th>评价项目</th><th>优</th><th>良</th><th>中</th><th>合格</th><th>不合格</th></tr>");
+                for (var a = 0; a < num; a++) {
+                    document.write("<tr name=\"Qr" + (a + 1) + "\"><td>" + Row[a].QID + "</td><td>" + Row[a].Content + "</td>");
+                    document.write("<td class=\"q" + (a + 1) + "\" id=\"" + Row[a].Weight * 0.9 + "\" style=\"width:8%;text-align:center\"></td>");
+                    document.write("<td class=\"q" + (a + 1) + "\" id=\"" + Row[a].Weight * 0.8 + "\" style=\"width:8%;text-align:center\"></td>");
+                    document.write("<td class=\"q" + (a + 1) + "\" id=\"" + Row[a].Weight * 0.7 + "\" style=\"width:8%;text-align:center\"></td>");
+                    document.write("<td class=\"q" + (a + 1) + "\" id=\"" + Row[a].Weight * 0.6 + "\" style=\"width:8%;text-align:center\"></td>");
+                    document.write("<td class=\"q" + (a + 1) + "\" id=\"" + Row[a].Weight * 0.5 + "\" style=\"width:8%;text-align:center\"></td>");
+                    document.write("</tr>");
+                };
+                document.write("<tr><td colspan=\"2\">综合评价（分为优、良、中、合格、不合格五等）</td>");
+                document.write("<td colspan=5 id=\"sum\" style=\"width:8%;text-align:center\"></td>");
+                document.write("</tr>");
+                
+                document.write("<tr><th colspan=\"7\">对课堂内容以及其它方面的具体意见或建议：</th></tr>");
+                document.write("<tr height=\"200\"><td name=\"reason\" width:100% colspan=\"7\"><p style=\"text-align:left\" id=\"reason\"></p></td></tr>");
+                
+                document.write("</table>");
+            }
+            
+            function getElementsByClassName(searchClass, node, tag){
+                if (document.getElementsByClassName) {
+                    return document.getElementsByClassName(searchClass);
+                }
+                else {
+                    node = node || document;
+                    tag = tag || "*";
+                    var returnElements = [];
+                    var els = (tag == '*' && node.all) ? node.all : node.getElementsByTagName(tag);
+                    var i = els.length;
+                    searchClass = searchClass.replace(/\-/g, '\\-');
+                    var pattern = new RegExp('(^|\\s)' + searchClass + '(\\s|$)');
+                    while (--i >= 0) {
+                        if (pattern.test(els[i].className)) {
+                            returnElements.push(els[i]);
+                        }
+                    }
+                    return returnElements;
+                }
+            }
+            
+            function fillscores(){
+                var q1 = getElementsByClassName("q1");
+                for (var i = 0; i < q1.length; i++) {
+                    if (q1[i].id == 90) 
+                        q1[i].innerHTML = "√";
+                }
+                var q2 = getElementsByClassName("q2");
+                for (var i = 0; i < q2.length; i++) {
+                    if (q2[i].id == 80) 
+                        q2[i].innerHTML = "√";
+                    
+                }
+                var q3 = getElementsByClassName("q3");
+                for (var i = 0; i < q3.length; i++) {
+                    if (q3[i].id == 90) 
+                        q3[i].innerHTML = "√";
+                    
+                }
+                var q4 = getElementsByClassName("q4");
+                for (var i = 0; i < q4.length; i++) {
+                    if (q4[i].id == 70) 
+                        q4[i].innerHTML = "√";
+                    
+                }
+                var q5 = getElementsByClassName("q5");
+                for (var i = 0; i < q5.length; i++) {
+                    if (q5[i].id == 90) 
+                        q5[i].innerHTML = "√";
+                    
+                }
+                var q6 = getElementsByClassName("q6");
+                for (var i = 0; i < q6.length; i++) {
+                    if (q6[i].id == 60) 
+                        q6[i].innerHTML = "√";
+                    
+                }
+                var q7 = getElementsByClassName("q7");
+                for (var i = 0; i < q7.length; i++) {
+                    if (q7[i].id == 50) 
+                        q7[i].innerHTML = "√";
+                    
+                }
+                var q8 = getElementsByClassName("q8");
+                for (var i = 0; i < q8.length; i++) {
+                    if (q8[i].id == 90) 
+                        q8[i].innerHTML = "√";
+                    
+                }
+                var q9 = getElementsByClassName("q9");
+                for (var i = 0; i < q9.length; i++) {
+                    if (q9[i].id == 90) 
+                        q9[i].innerHTML = "√";
+                    
+                }
+                var q10 = getElementsByClassName("q10");
+                for (var i = 0; i < q10.length; i++) {
+                    if (q10[i].id == 80) 
+                        q10[i].innerHTML = "√";
+                    
+                }
+                var q11 = getElementsByClassName("q11");
+                for (var i = 0; i < q11.length; i++) {
+                    if (q11[i].id == 90) 
+                        q11[i].innerHTML = "√";
+                    
+                }
+                var sum = document.getElementById("sum");
+                sum.innerHTML = "优";
+                var agelevel = document.getElementById("agelevel");
+                agelevel.innerHTML = "中";
+                //				var reason=document.getElementsByName("reason");
+                //				document.getElementsByName("reason")[0].innerHTML="这是给老师评价的原因！"
+                var reason = document.getElementById("reason");
+                reason.innerHTML = "这是给老师评价的原因！"
+            }
+        </script>
+        <style type="text/css">
+            .bottomline {
+                border-bottom: 1px solid;
+                border-left-width: 0px;
+                border-right-width: 0px;
+                border-top-width: 0px;
+            } .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            } .clearfix {
+                display: inline-block;
+            } .clearfix {
+                display: block;
+            }
+            
+            body {
+                TEXT-ALIGN: center;
+            } #center {
+                MARGIN-RIGHT: auto;
+                MARGIN-LEFT: auto;
+            } *:focus {
+                outline: none;
+            }
+        </style>
+        <style media="print">
+            .notdiv {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div style=widows:>
+        </div>
+        <form id="evaluform" action="">
+            <br>
+            <br>
+            <div id="container" style="width:95%;">
+                <h1 align="middle">贵 州 大 学 听 课 评 价 表</h1>
+                <br>
+                <div id="evalutable" align="middle" style="width:100%">
+                    <table style="width:90%;border-collapse:collapse">
+                        <tr>
+                            <td style="width:15%;text-align:right">
+                                开课单位：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                                计算机科学与信息学院
+                            </td>
+                            <td width="6%">
+                            </td>
+                            <td style="width:15%;text-align:right">
+                                授课班级：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%;text-align:right">
+                                课程名称：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                            </td>
+                            <td width="6%">
+                            </td>
+                            <td style="width:15%;text-align:right">
+                                课程类型：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                                院级必修课
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%;text-align:right">
+                                授课教师：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                            </td>
+                            <td width="6%">
+                            </td>
+                            <td style="width:15%;text-align:right">
+                                年龄层次：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline" id="agelevel">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:15%;text-align:right">
+                                授课时间：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                            </td>
+                            <td width="6%">
+                            </td>
+                            <td style="width:15%;text-align:right">
+                                授课地点：
+                            </td>
+                            <td style="text-align:center" width="30%" class="bottomline">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <!--
+                    <div id="leftcontent" style="width:50%;float:left">
+                    开课单位：<input type="text" style="width:200px" class="bottomline" name="dept" id="dept" onblur="check2()">
+                    <br>
+                    课程名称：<input type="text" style="width:200px" class="bottomline" name="cname" id="cname">
+                    <br>
+                    授课教师：<input type="text" style="width:200px" class="bottomline" name="teaname" id="tname">
+                    <br>
+                    授课时间：<input type="text" style="width:200px" class="bottomline" name="teatime" id="teatime">
+                    </div>
+                    <div id="rightcontent" style="width:50%;float:right">
+                    授课班级：<input type="text" style="width:200px" class="bottomline" name="clname" id="cname">
+                    <br>
+                    课程类型：<input type="text" style="width:200px" class="bottomline" name="coursetype" id="coursetype">
+                    <br>
+                    年龄层次：<input type="text" style="width:200px;text-align:center" class="bottomline" name="agelevel" id="agelevel">
+                    </div>授课地点：<input type="text" style="width:200px" class="bottomline" name="tealocation" id="tealocation">
+                    </div>
+                    <div class="clearfix">
+                    <br>
+                    </div>
+                    <br>
+                    -->
+                    <script language="JavaScript">
+                        loop2();
+                        fillscores();
+                    </script>
+                </div>
+                <br>
+                <div style="witth:100%" align="middle">
+                    <!--
+                    <div style="width:50%;float:left">
+                    听课人（签字）：<input type="text" class="bottomline" name="lisname">
+                    </div>
+                    <div style="width:50%;float:left">
+                    提交时间：<input type="text" class="bottomline" name="subtime">
+                    </div>
+                    <div class="clearfix">
+                    <br>
+                    <br>
+                    </div>
+                    -->
+                    <br>
+                    <table width="90%" style="border-collapse:collapse">
+                        <tr>
+                            <td style="width:25%;text-align:right">
+                                听课人（签字）：
+                            </td>
+                            <td width="25%" class="bottomline">
+                            </td>
+                            <td width="6%">
+                            </td>
+                            <td style="width:15%;text-align:right">
+                            </td>
+                            <td width="28%">
+                                &nbsp&nbsp&nbsp年&nbsp&nbsp&nbsp月&nbsp&nbsp&nbsp日
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan=5>
+                                <p style="font-size:72%">
+                                    （备注：听课后请在各评价项目之后的相应评分位置填入您的选项，只限单选。综合评价只填一个等级）
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="notdiv">
+                        <div id="submitbutton" style="width:50%;float:left">
+                            <input type="button" value="提交" onclick="agelevelfunc()">
+                        </div>
+                        <div id="pressbutton" style="width:50%;float:right">
+                            <input type="button" value="打印" onclick="javascript:window.print()">
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </body>
+            </html>

@@ -1,0 +1,479 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate
+END
+AbstractTeacher.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractTeacher.java
+END
+Mail.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Mail.hbm.xml
+END
+AbstractMail.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractMail.java
+END
+StuEvalResId.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalResId.java
+END
+CourseTypeId.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/CourseTypeId.java
+END
+TeaEvalRes.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeaEvalRes.hbm.xml
+END
+StuEvalRes.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalRes.hbm.xml
+END
+StuQuestionnaire.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuQuestionnaire.java
+END
+MailReplyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/MailReplyDAO.java
+END
+CourseDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/CourseDAO.java
+END
+AbstractCourse.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractCourse.java
+END
+TeaEvaluationDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeaEvaluationDAO.java
+END
+Student.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Student.java
+END
+StuEvaluation.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvaluation.hbm.xml
+END
+AbstractTeaEvalResId.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/AbstractTeaEvalResId.java
+END
+StuEvalRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalRes.java
+END
+TeacherDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeacherDAO.java
+END
+TeaEvalDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaEvalDetail.java
+END
+AbstractAdministrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractAdministrator.java
+END
+AbstractTeaQuestionnaire.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractTeaQuestionnaire.java
+END
+AdministratorDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/AdministratorDAO.java
+END
+TeaQuestionnaireDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaQuestionnaireDAO.java
+END
+AbstractTeaEvalDetailId.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractTeaEvalDetailId.java
+END
+StuQuestionnaireDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuQuestionnaireDAO.java
+END
+StuEvalDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalDetail.java
+END
+ChooseClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/ChooseClass.java
+END
+AbstractStuEvalDetailId.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStuEvalDetailId.java
+END
+AbstractChooseClassId.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractChooseClassId.java
+END
+StudentDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StudentDAO.java
+END
+Teacher.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Teacher.java
+END
+AbstractTeaEvalRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractTeaEvalRes.java
+END
+Mail.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Mail.java
+END
+AbstractTeaEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/AbstractTeaEvaluation.java
+END
+CourseType.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/CourseType.hbm.xml
+END
+AbstractCourseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractCourseType.java
+END
+AbstractStuEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStuEvaluation.java
+END
+TeaEvalDetail.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaEvalDetail.hbm.xml
+END
+IBaseHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/IBaseHibernateDAO.java
+END
+StuEvalDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalDetailDAO.java
+END
+ChooseClassDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/ChooseClassDAO.java
+END
+Course.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Course.java
+END
+MailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/MailDAO.java
+END
+TeaEvalResId.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeaEvalResId.java
+END
+TeaEvalResDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeaEvalResDAO.java
+END
+Administrator.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Administrator.java
+END
+BaseHibernateDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/BaseHibernateDAO.java
+END
+TeaQuestionnaire.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaQuestionnaire.java
+END
+StuEvalResDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalResDAO.java
+END
+TeaEvalDetailId.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaEvalDetailId.java
+END
+MailReply.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/MailReply.hbm.xml
+END
+AbstractMailReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractMailReply.java
+END
+StuEvalDetailId.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalDetailId.java
+END
+ChooseClassId.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/ChooseClassId.java
+END
+Course.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Course.hbm.xml
+END
+TeaEvaluation.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeaEvaluation.hbm.xml
+END
+StuEvaluationDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvaluationDAO.java
+END
+TeaEvalRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaEvalRes.java
+END
+HibernateSessionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/HibernateSessionFactory.java
+END
+AbstractStuEvalResId.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStuEvalResId.java
+END
+Teacher.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Teacher.hbm.xml
+END
+TeaEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/30/src/com/ees/hibernate/TeaEvaluation.java
+END
+CourseType.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/CourseType.java
+END
+StuEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvaluation.java
+END
+AbstractCourseTypeId.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractCourseTypeId.java
+END
+Administrator.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Administrator.hbm.xml
+END
+TeaQuestionnaire.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaQuestionnaire.hbm.xml
+END
+StuQuestionnaire.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuQuestionnaire.hbm.xml
+END
+AbstractStuQuestionnaire.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStuQuestionnaire.java
+END
+Student.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/Student.hbm.xml
+END
+AbstractStudent.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStudent.java
+END
+AbstractStuEvalRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStuEvalRes.java
+END
+CourseTypeDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/CourseTypeDAO.java
+END
+AbstractTeaEvalDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractTeaEvalDetail.java
+END
+TeaEvalDetailDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/TeaEvalDetailDAO.java
+END
+StuEvalDetail.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/StuEvalDetail.hbm.xml
+END
+AbstractStuEvalDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractStuEvalDetail.java
+END
+AbstractChooseClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/AbstractChooseClass.java
+END
+ChooseClass.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/ChooseClass.hbm.xml
+END
+MailReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gundamdxdx.ees/!svn/ver/12/src/com/ees/hibernate/MailReply.java
+END
